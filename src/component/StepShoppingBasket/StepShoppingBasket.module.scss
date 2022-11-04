@@ -1,0 +1,33 @@
+.item {
+  display: flex;
+  p:first-child {
+    margin-bottom: 18px;
+  }
+  &-content-controller {
+    display: flex;
+    justify-content: space-between;
+    width: 116px;
+    button {
+      display: flex;
+      border: none;
+      border-radius: 50%;
+      align-items: center;
+      background-color: #f0f0f5;
+      width: 26px;
+      height: 26px;
+    }
+  }
+  img {
+    margin-right: 21px;
+  }
+  &-end {
+    margin-left: auto;
+    p {
+      margin-top: 3px;
+      font-family: "Nunito Sans", sans-serif;
+      font-weight: bold;
+      margin-left: auto;
+      line-height: 1.375;
+    }
+  }
+}

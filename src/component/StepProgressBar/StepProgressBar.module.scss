@@ -1,0 +1,58 @@
+.number {
+  border: 1px solid #afb1bd;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.step {
+  display: flex;
+  gap: 8px;
+  color: #afb1bd;
+  &-1::before,
+  &-2::before {
+    position: absolute;
+    content: "";
+    width: 10%;
+    height: 2px;
+    background-color: #afb1bd;
+    @media screen and (max-width: 414px) {
+      width: 5%;
+    }
+  }
+  &-1::before {
+    top: 45%;
+    left: 30%;
+    transform: translate(-50%, 50%);
+    @media screen and (max-width: 414px) {
+      left: 27%;
+    }
+  }
+  &-2::before {
+    top: 45%;
+    right: 30%;
+    transform: translate(50%, 50%);
+    @media screen and (max-width: 414px) {
+      right: 27%;
+    }
+  }
+}
+
+.active {
+  .number {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+  }
+  p:last-child {
+    color: black;
+  }
+  &::before {
+    background-color: black;
+  }
+}

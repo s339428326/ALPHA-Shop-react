@@ -1,0 +1,21 @@
+.height {
+  height: 60px;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    width: unset;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
