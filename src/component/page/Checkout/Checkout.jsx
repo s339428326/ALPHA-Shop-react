@@ -14,9 +14,7 @@ export default function Checkout() {
         <div className="col-lg-6">
           <StepProgressBar />
           <div className={styles["form"]}>
-            <form action="">
-              <Step />
-            </form>
+            <Step />
           </div>
         </div>
         <div className="col-lg-5">

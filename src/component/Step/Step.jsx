@@ -20,7 +20,9 @@ export function Step1() {
             稱謂
           </label>
           <select id="gender">
-            <option selected>請選擇</option>
+            <option value="DEFAULT" disabled>
+              請選擇
+            </option>
             <option value="male">先生</option>
             <option value="female">小姐</option>
             <option value="anther">其他</option>
@@ -59,7 +61,9 @@ export function Step1() {
             縣市
           </label>
           <select id="city">
-            <option selected>請選擇</option>
+            <option value="DEFAULT" disabled>
+              請選擇
+            </option>
             <option value="male">台北</option>
             <option value="female">台中</option>
             <option value="female">高雄</option>

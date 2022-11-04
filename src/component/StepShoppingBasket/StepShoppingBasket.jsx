@@ -29,11 +29,11 @@ export default function StepShoppingBasket() {
     <div className="px-24 py-32 border rounded-3">
       <h3>購物籃</h3>
       <ul className="list-unstyled d-flex flex-column gap-24 my-32">
-        {buyData.map((item) => {
+        {buyData.map((item, index) => {
           //遍歷進入購物頁面的總金額計算
           totalPrice += item.price;
           return (
-            <li>
+            <li key={`BasketItem${index}`}>
               <ShoppingBasketItem
                 itemName={item.name}
                 itemPrice={item.price}

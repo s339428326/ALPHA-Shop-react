@@ -13,27 +13,27 @@ export default function ProgressControl() {
 
 export function StepPreviousBtn() {
   return (
-    <div className={`${styles["btn"]} d-flex align-items-center gap-8`}>
+    <button className={`${styles["btn"]} d-flex align-items-center gap-8`}>
       <img src={arrowLeft} alt={`arrow-left`} />
       <p>上一步</p>
-    </div>
+    </button>
   );
 }
 
 export function StepNextBtn() {
   return (
-    <div
+    <button
       className={`${styles["btn"]} ${styles["btn-next"]} d-flex gap-16 ms-auto`}
     >
       <p className="text-white">下一步</p>
       <img src={arrowWhiteRight} alt={"arrow-right"} />
-    </div>
+    </button>
   );
 }
 
 export function StepFinishBtn() {
   return (
-    <button className={`${styles["btn-next"]}  d-flex gap-16`}>
+    <button className={`${styles["btn-next"]} d-flex gap-16`}>
       <p className="text-white">確認下單</p>
     </button>
   );
