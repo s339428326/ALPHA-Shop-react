@@ -64,10 +64,18 @@ export function Step1() {
             <option value="DEFAULT" disabled>
               請選擇
             </option>
-            <option value="male">台北</option>
-            <option value="female">台中</option>
-            <option value="female">高雄</option>
-            <option value="anther">其他</option>
+            <option name="city" value="TPE">
+              台北
+            </option>
+            <option name="city" value="TXG">
+              台中
+            </option>
+            <option name="city" value="KHH">
+              高雄
+            </option>
+            <option name="city" value="anther">
+              其他
+            </option>
           </select>
         </div>
         <div className="col-8">
@@ -104,7 +112,7 @@ export function Step2() {
                   name={"transport"}
                   id={"normal-transport"}
                   value="normal"
-                  checked
+                  defaultChecked={true}
                 />
                 <div className="d-flex flex-column">
                   <p>標準運送</p>
