@@ -7,15 +7,15 @@ export default function StepProgressBar() {
         className={`${styles["step"]} ${styles["step-1"]} ${styles["active"]}`}
       >
         <p className={`${styles["number"]}`}>1</p>
-        <p>寄送地址</p>
+        <p className="d-none d-md-flex">寄送地址</p>
       </div>
       <div className={`${styles["step"]} ${styles["step-2"]}`}>
         <p className={`${styles["number"]}`}>2</p>
-        <p>運送方式</p>
+        <p className="d-none d-md-flex">運送方式</p>
       </div>
       <div className={`${styles["step"]}`}>
         <p className={`${styles["number"]}`}>3</p>
-        <p>付款方式</p>
+        <p className="d-none d-md-flex">付款方式</p>
       </div>
     </div>
   );

@@ -7,11 +7,11 @@ import fb from "../../assets/icon/fb.svg";
 export default function Footer() {
   return (
     <footer className={`${styles["bg-footer"]} ${styles["footer"]}`}>
-      <div className="container d-flex justify-content-between">
+      <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-start">
         <div className="my-auto">
           <img src={logo} alt="logo" />
         </div>
-        <div>
+        <div className="my-24 my-md-0">
           <p className="fs-4 fw-bold mb-24">客服服務</p>
           <ul className="list-unstyled mb-0 d-flex flex-column gap-8">
             <li>運送說明</li>
@@ -20,7 +20,7 @@ export default function Footer() {
             <li>FAQ</li>
           </ul>
         </div>
-        <div>
+        <div className="my-24 my-md-0">
           <p className="fs-4 fw-bold mb-24">關於我們</p>
           <ul className="list-unstyled mb-0 d-flex flex-column gap-8">
             <li>品牌故事</li>
@@ -28,7 +28,7 @@ export default function Footer() {
             <li>Press kit</li>
           </ul>
         </div>
-        <div>
+        <div className="my-24 my-md-0">
           <p className="fs-4 fw-bold mb-24">資訊</p>
           <ul className="list-unstyled mb-0 d-flex flex-column gap-8">
             <li>隱私權政策</li>
@@ -39,10 +39,10 @@ export default function Footer() {
         <div>
           <p className="fs-4 fw-bold mb-24">追蹤 ALPHA Shop</p>
           <ul className="list-unstyled mb-0 d-flex flex-column gap-8 mb-0">
-            <li>
+            <li className="mx-auto mx-md-0">
               <a href="tel:+886 02123-45678">+886 02123-45678</a>
             </li>
-            <ul className="list-unstyled d-flex gap-16 mb-0">
+            <ul className="list-unstyled d-flex gap-16 mb-0 justify-content-center justify-content-md-start">
               <li>
                 <img className={`${styles["social-icon"]}`} src={fb} alt="fb" />
               </li>

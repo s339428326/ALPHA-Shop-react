@@ -8,6 +8,10 @@
   align-items: center;
   font-size: 12px;
   line-height: 16px;
+  @media screen and (max-width: 768px) {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .step {
@@ -21,15 +25,15 @@
     width: 10%;
     height: 2px;
     background-color: #afb1bd;
-    @media screen and (max-width: 414px) {
-      width: 5%;
+    @media screen and (max-width: 768px) {
+      width: 30%;
     }
   }
   &-1::before {
     top: 45%;
     left: 30%;
     transform: translate(-50%, 50%);
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 768px) {
       left: 27%;
     }
   }
@@ -37,7 +41,7 @@
     top: 45%;
     right: 30%;
     transform: translate(50%, 50%);
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 768px) {
       right: 27%;
     }
   }
