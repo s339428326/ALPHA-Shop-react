@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/s339428326/ALPHA-Shop-react/static/css/main.5e2d5eb0.css",
+    "main.js": "/s339428326/ALPHA-Shop-react/static/js/main.37a18272.js",
+    "static/media/product-1.jpg": "/s339428326/ALPHA-Shop-react/static/media/product-1.519c527178915d9e3b5d.jpg",
+    "static/media/product-2.jpg": "/s339428326/ALPHA-Shop-react/static/media/product-2.a690cf23a0a476381536.jpg",
+    "static/media/logo.svg": "/s339428326/ALPHA-Shop-react/static/media/logo.7ea861ea30dffdc8868036a2641ea1f7.svg",
+    "static/media/ins.svg": "/s339428326/ALPHA-Shop-react/static/media/ins.17e98dac2c0120bb855926944464e299.svg",
+    "static/media/whatApp.svg": "/s339428326/ALPHA-Shop-react/static/media/whatApp.672f767b64c3276761dd82a13e54be92.svg",
+    "static/media/cart.svg": "/s339428326/ALPHA-Shop-react/static/media/cart.f995edc465b8b1ff6938d6fa16109c6e.svg",
+    "static/media/search.svg": "/s339428326/ALPHA-Shop-react/static/media/search.1277d5dd36ba5bcffc6eb71e4f145cfa.svg",
+    "static/media/arrow_left.svg": "/s339428326/ALPHA-Shop-react/static/media/arrow_left.e7ae4ec76c4989de3938474e608d69f7.svg",
+    "static/media/arrow_white_right.svg": "/s339428326/ALPHA-Shop-react/static/media/arrow_white_right.55fba09ff20977c0141d9362a70c8964.svg",
+    "static/media/plus.svg": "/s339428326/ALPHA-Shop-react/static/media/plus.3748252dfeba0245b197cef2fee4eb88.svg",
+    "index.html": "/s339428326/ALPHA-Shop-react/index.html",
+    "static/media/fb.svg": "/s339428326/ALPHA-Shop-react/static/media/fb.666e0457564c4646eb81bcf9c17de2cc.svg",
+    "static/media/moon.svg": "/s339428326/ALPHA-Shop-react/static/media/moon.1d3cc2a408e1c1acfc36f7df49b5e18c.svg",
+    "static/media/reduce.svg": "/s339428326/ALPHA-Shop-react/static/media/reduce.5d3211d7aba2b7841025497a74f8716a.svg",
+    "static/media/menu.svg": "/s339428326/ALPHA-Shop-react/static/media/menu.7eca1ce0bad1225bba8f9d2b4fd5cef3.svg",
+    "main.5e2d5eb0.css.map": "/s339428326/ALPHA-Shop-react/static/css/main.5e2d5eb0.css.map",
+    "main.37a18272.js.map": "/s339428326/ALPHA-Shop-react/static/js/main.37a18272.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e2d5eb0.css",
+    "static/js/main.37a18272.js"
+  ]
+}
