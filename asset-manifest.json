@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ALPHA-Shop-react/static/css/main.5e2d5eb0.css",
-    "main.js": "/ALPHA-Shop-react/static/js/main.909aabab.js",
+    "main.css": "/ALPHA-Shop-react/static/css/main.11656d01.css",
+    "main.js": "/ALPHA-Shop-react/static/js/main.c9ec17fd.js",
     "static/media/product-1.jpg": "/ALPHA-Shop-react/static/media/product-1.519c527178915d9e3b5d.jpg",
     "static/media/product-2.jpg": "/ALPHA-Shop-react/static/media/product-2.a690cf23a0a476381536.jpg",
     "static/media/logo.svg": "/ALPHA-Shop-react/static/media/logo.7ea861ea30dffdc8868036a2641ea1f7.svg",
@@ -17,11 +17,11 @@
     "static/media/moon.svg": "/ALPHA-Shop-react/static/media/moon.1d3cc2a408e1c1acfc36f7df49b5e18c.svg",
     "static/media/reduce.svg": "/ALPHA-Shop-react/static/media/reduce.5d3211d7aba2b7841025497a74f8716a.svg",
     "static/media/menu.svg": "/ALPHA-Shop-react/static/media/menu.7eca1ce0bad1225bba8f9d2b4fd5cef3.svg",
-    "main.5e2d5eb0.css.map": "/ALPHA-Shop-react/static/css/main.5e2d5eb0.css.map",
-    "main.909aabab.js.map": "/ALPHA-Shop-react/static/js/main.909aabab.js.map"
+    "main.11656d01.css.map": "/ALPHA-Shop-react/static/css/main.11656d01.css.map",
+    "main.c9ec17fd.js.map": "/ALPHA-Shop-react/static/js/main.c9ec17fd.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e2d5eb0.css",
-    "static/js/main.909aabab.js"
+    "static/css/main.11656d01.css",
+    "static/js/main.c9ec17fd.js"
   ]
 }
