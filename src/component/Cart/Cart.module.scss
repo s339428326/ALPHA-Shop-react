@@ -1,5 +1,6 @@
 .item {
   display: flex;
+  flex-wrap: wrap;
   p:first-child {
     margin-bottom: 18px;
   }

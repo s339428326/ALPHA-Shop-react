@@ -1,4 +1,4 @@
-import styles from "./StepProgressBar.module.scss";
+import styles from "./StepProgress.module.scss";
 
 export default function StepProgressBar() {
   return (

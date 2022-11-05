@@ -1,17 +1,19 @@
 import styles from "./Checkout.module.scss";
-import StepProgressBar from "../../StepProgressBar/StepProgressBar";
-import Step from "../../Step/Step";
-import StepShoppingBasket from "../../StepShoppingBasket/StepShoppingBasket";
+import StepProgress from "../../StepProgress/StepProgress";
+// import Step1 from "../../Step1/Step1";
+// import Step2 from "../../Step2/Step2";
+import Step3 from "../../Step3/Step3";
+import Cart from "../../Cart/Cart";
 import ProgressControl from "../../ProgressControl/ProgressControl";
+
 //page
 // let page = 0;
-
 export default function Checkout() {
   //暫時阻擋表單傳送
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log("form submitted ");
+    console.log("form submitted");
   };
 
   return (
@@ -20,16 +22,18 @@ export default function Checkout() {
       <form onSubmit={handleSubmit}>
         <section className="row">
           <div className="col-lg-6">
-            <StepProgressBar />
+            <StepProgress />
             <div className={styles["step"]}>
-              <Step />
+              {/* <Step1 /> */}
+              {/* <Step2 /> */}
+              <Step3 />
             </div>
             <div className={`${styles["control"]}`}>
               <ProgressControl />
             </div>
           </div>
           <div className="col-lg-5 offset-lg-1">
-            <StepShoppingBasket />
+            <Cart />
           </div>
         </section>
       </form>

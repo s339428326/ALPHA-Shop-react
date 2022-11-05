@@ -1,4 +1,4 @@
-import styles from "./StepShoppingBasket.module.scss";
+import styles from "./Cart.module.scss";
 import plus from "../../assets/icon/plus.svg";
 import reduce from "../../assets/icon/reduce.svg";
 import item1 from "../../assets/image/product-1.jpg";
@@ -90,7 +90,6 @@ export function ShoppingBasketItem({
           </button>
         </div>
       </div>
-
       <div className={`${styles["item-end"]}`}>
         <p>$ {itemPrice}</p>
       </div>
