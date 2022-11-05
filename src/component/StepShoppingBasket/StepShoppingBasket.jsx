@@ -26,7 +26,7 @@ export default function StepShoppingBasket() {
   let totalPrice = 0;
   //需要建立一個可以拿到ShoppingBasketItem更新金額的方法
   return (
-    <div className="px-24 py-32 border rounded-3">
+    <div className="px-24 py-32 border rounded-3 h-100">
       <h3>購物籃</h3>
       <ul className="list-unstyled d-flex flex-column gap-24 my-32">
         {buyData.map((item, index) => {
@@ -44,12 +44,12 @@ export default function StepShoppingBasket() {
           );
         })}
       </ul>
-      <div className="d-flex justify-content-between pt-16 border-top mb-32">
+      <div className="d-flex justify-content-between pt-16 border-top mt-auto mb-32">
         <p>運費</p>
         {/* 這裡需要接取From的Step2 運送金額 */}
         <strong>免費</strong>
       </div>
-      <div className="d-flex justify-content-between">
+      <div className="d-flex justify-content-between pt-16 border-top">
         <p>小計</p>
         <strong>$ {totalPrice}</strong>
       </div>

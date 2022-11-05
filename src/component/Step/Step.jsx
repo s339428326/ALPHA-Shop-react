@@ -1,13 +1,7 @@
 import styles from "./Step.module.scss";
-import ProgressControl from "../ProgressControl/ProgressControl";
 
 export default function Step() {
-  return (
-    <form action="">
-      <Step1 />
-      <ProgressControl />
-    </form>
-  );
+  return <Step1 />;
 }
 
 export function Step1() {
@@ -19,7 +13,7 @@ export function Step1() {
           <label className={`mb-8`} htmlFor="gender">
             稱謂
           </label>
-          <select id="gender">
+          <select defaultValue="DEFAULT" id="gender" required={true}>
             <option value="DEFAULT" disabled>
               請選擇
             </option>
@@ -60,22 +54,14 @@ export function Step1() {
           <label className={`mb-8`} htmlFor="city">
             縣市
           </label>
-          <select id="city">
+          <select defaultValue="DEFAULT" id="city">
             <option value="DEFAULT" disabled>
               請選擇
             </option>
-            <option name="city" value="TPE">
-              台北
-            </option>
-            <option name="city" value="TXG">
-              台中
-            </option>
-            <option name="city" value="KHH">
-              高雄
-            </option>
-            <option name="city" value="anther">
-              其他
-            </option>
+            <option value="TPE">台北</option>
+            <option value="TXG">台中</option>
+            <option value="KHH">高雄</option>
+            <option value="anther">其他</option>
           </select>
         </div>
         <div className="col-8">

@@ -23,9 +23,9 @@ export function StepPreviousBtn() {
 export function StepNextBtn() {
   return (
     <button
-      className={`${styles["btn"]} ${styles["btn-next"]} d-flex gap-16 ms-auto`}
+      className={`${styles["btn"]} ${styles["btn-next"]} d-flex gap-16 ms-lg-auto  d-flex justify-content-center`}
     >
-      <p className="text-white">下一步</p>
+      <p className="text-white ">下一步</p>
       <img src={arrowWhiteRight} alt={"arrow-right"} />
     </button>
   );
