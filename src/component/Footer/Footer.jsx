@@ -6,7 +6,9 @@ import fb from "../../assets/icon/fb.svg";
 
 export default function Footer() {
   return (
-    <footer className={`${styles["bg-footer"]} ${styles["footer"]}`}>
+    <footer
+      className={`${styles["bg-footer"]} ${styles["footer"]} d-none d-lg-block`}
+    >
       <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-start">
         <div className="my-auto">
           <img src={logo} alt="logo" />

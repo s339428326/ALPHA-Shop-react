@@ -14,17 +14,32 @@ export default function Header() {
       <nav
         className={`d-flex justify-content-between align-items-center h-100 position-relative`}
       >
-        <div className={`${styles["menu"]} d-lg-none`}>
+        <label htmlFor="btn-menu" className={`${styles["menu"]} d-lg-none`}>
           <img src={menu} alt="menu" />
-        </div>
-        <ul
-          className={`list-unstyled align-items-center gap-16 mb-0 d-none d-lg-flex`}
-        >
+        </label>
+        <input
+          className={`${styles["btn-menu"]} d-none`}
+          type="checkbox"
+          name="btn-menu"
+          id="btn-menu"
+        />
+        <ul className={`${styles["menu-list"]}`}>
           <li>男款</li>
           <li>女款</li>
           <li>最新消息</li>
           <li>客製商品</li>
           <li>聯絡我們</li>
+          <ul className="d-flex list-unstyled justify-content-center d-lg-none gap-40">
+            <li>
+              <img src={search} alt="search " />
+            </li>
+            <li>
+              <img src={cart} alt="search " />
+            </li>
+            <li>
+              <img src={moon} alt="moon" />
+            </li>
+          </ul>
         </ul>
         <div className={`${styles["logo"]}`}>
           <img src={logo} alt="logo" />

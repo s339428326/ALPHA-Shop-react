@@ -19,3 +19,42 @@
     transform: translate(50%, -50%);
   }
 }
+
+// list-unstyled align-items-center gap-16 mb-0 d-none d-lg-flex
+.menu-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 16px;
+  padding-left: 0;
+  margin-bottom: 0;
+  @media screen and (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: white;
+    // height: 450px;
+    height: 0;
+    overflow: hidden;
+    z-index: 99;
+    transition: all 0.35s ease;
+    li {
+      text-align: center;
+      padding: 24px 0;
+      border-bottom: 1px solid #2a2a2a1e;
+    }
+    ul {
+      li {
+        border: none;
+      }
+    }
+  }
+}
+
+.btn-menu:checked ~ .menu-list {
+  height: 450px;
+}

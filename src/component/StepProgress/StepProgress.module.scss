@@ -1,25 +1,35 @@
-.number {
-  border: 1px solid #afb1bd;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  line-height: 16px;
-  @media screen and (max-width: 768px) {
-    width: 32px;
-    height: 32px;
-  }
-}
-
 .step {
   display: flex;
   gap: 8px;
   color: #afb1bd;
   &-1::before,
+  &-2::before,
+  &-3::before {
+    display: block;
+    border: 1px solid #afb1bd;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    @media screen and (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
   &-2::before {
+    content: "2";
+  }
+  &-3::before {
+    content: "3";
+  }
+
+  &-1::after,
+  &-2::after {
     position: absolute;
     content: "";
     width: 10%;
@@ -29,7 +39,7 @@
       width: 30%;
     }
   }
-  &-1::before {
+  &-1::after {
     top: 45%;
     left: 30%;
     transform: translate(-50%, 50%);
@@ -37,7 +47,7 @@
       left: 27%;
     }
   }
-  &-2::before {
+  &-2::after {
     top: 45%;
     right: 30%;
     transform: translate(50%, 50%);
@@ -45,18 +55,59 @@
       right: 27%;
     }
   }
+
+  &-1 {
+    p {
+      color: black;
+    }
+    &::before {
+      content: "1";
+      color: white;
+      border-color: black;
+      background-color: black;
+    }
+    &::after {
+      background-color: black;
+    }
+  }
 }
 
-.active {
-  .number {
-    background-color: black;
-    border: 1px solid black;
+//step2
+.active-1 {
+  &::before {
+    content: "V";
     color: white;
   }
-  p:last-child {
-    color: black;
+  & + .step-2 {
+    &::before {
+      color: black;
+      border-color: black;
+    }
+    p {
+      color: black;
+    }
+    &::after {
+      background-color: black;
+    }
   }
+}
+//step3
+.active-2 {
   &::before {
+    content: "V";
+    color: white !important;
     background-color: black;
+  }
+  & + .step-3 {
+    &::before {
+      color: black;
+      border-color: black;
+    }
+    p {
+      color: black;
+    }
+    &::after {
+      background-color: black;
+    }
   }
 }

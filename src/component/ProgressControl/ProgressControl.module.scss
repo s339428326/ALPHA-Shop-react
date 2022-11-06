@@ -8,6 +8,9 @@
   background-color: #f67599;
   gap: 12px;
   padding: 12px 48px;
+}
+
+.btn-next-width {
   @media screen and (max-width: 991px) {
     width: 100%;
   }

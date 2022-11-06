@@ -1,6 +1,13 @@
-export default function Step1() {
+export default function Step1(props) {
+  //換頁時使用d-none遮蔽元件
+  const stepStyle = () => {
+    if (props.step === 2 || props.step === 3) {
+      return "d-none";
+    }
+    return null;
+  };
   return (
-    <div className={`d-flex flex-column`}>
+    <div className={`d-flex flex-column ${stepStyle()}`}>
       <h2 className="mb-24">寄送地址</h2>
       <div className="row">
         <div className="col-4 mb-24">

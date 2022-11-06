@@ -1,11 +1,18 @@
 import styles from "./Step2.module.scss";
 
-export default function Step2() {
+export default function Step2(props) {
+  //換頁時使用d-none遮蔽元件
+  const stepStyle = () => {
+    if (props.step === 1 || props.step === 3) {
+      return "d-none";
+    }
+    return null;
+  };
   return (
-    <div className={`d-flex flex-column`}>
+    <div className={`d-flex flex-column ${stepStyle()}`}>
       <h2 className="mb-24">運送方式</h2>
       <div className="row">
-        <div className="col-10">
+        <div className="col col-lg-10">
           <div className={`${styles["mb-120"]} d-flex flex-column gap-24`}>
             <label
               htmlFor="normal-transport"
