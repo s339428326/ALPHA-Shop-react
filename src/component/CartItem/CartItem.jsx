@@ -6,31 +6,53 @@ import reduce from "../../assets/icon/reduce.svg";
 import { useState } from "react";
 
 export default function CartItem(props) {
+  console.log(`產品-${props.id}的資料`, props.data);
+
   //計算單品數量
-  const [count, setCount] = useState(props.itemQuantity);
+  const [count, setCount] = useState(props.quantity);
+
   const addCountBtn = (e) => {
     e.preventDefault();
-    setCount((count) => count + 1);
+    //更新數量
+    setCount((count) => count + 1); //可以使用data status 更新這裡可以優化
+    // 更新buy data 商品數量
+    props.setData((data) => {
+      data[props.id - 1].quantity += 1;
+      return data;
+    });
+    props.setCal(
+      (totalPrice) => (totalPrice += props.data[props.id - 1].price)
+    );
   };
 
   const reduceCountBtn = (e) => {
     e.preventDefault();
     if (count > 0) {
-      setCount((count) => count - 1);
+      //更新數量
+      setCount((count) => count - 1); //可以使用data status 更新這裡可以優化
+      // 更新buy data 商品數量
+      props.setData((data) => {
+        data[props.id - 1].quantity -= 1;
+        return data;
+      });
+      //更新總金額
+      props.setCal(
+        (totalPrice) => (totalPrice -= props.data[props.id - 1].price)
+      );
     }
   };
 
-  return (
+  return count !== 0 ? (
     <div className={`${styles["item"]}`}>
       <img
         className="rounded-2"
-        src={props.itemImageUrl}
-        alt={props.itemName}
+        src={props.img}
+        alt={props.name}
         width={"100"}
         height={"100"}
       />
       <div className="item-content">
-        <p>{props.itemName}</p>
+        <p>{props.name}</p>
         <div className={`${styles["item-content-controller"]}`}>
           <button onClick={reduceCountBtn}>
             <img className="rounded-2" src={reduce} alt="icon-reduce" />
@@ -42,8 +64,8 @@ export default function CartItem(props) {
         </div>
       </div>
       <div className={`${styles["item-end"]}`}>
-        <p>$ {props.itemPrice}</p>
+        <p>$ {props.price * count}</p>
       </div>
     </div>
-  );
+  ) : null;
 }

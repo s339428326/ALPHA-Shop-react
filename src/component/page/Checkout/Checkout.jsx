@@ -9,7 +9,25 @@ import ProgressControl from "../../ProgressControl/ProgressControl";
 import { useState } from "react";
 
 export default function Checkout() {
+  const buyData = [
+    {
+      id: "1",
+      name: "貓咪罐罐",
+      img: "https://picsum.photos/300/300?text=1",
+      price: 100,
+      quantity: 2,
+    },
+    {
+      id: "2",
+      name: "貓咪干干",
+      img: "https://picsum.photos/300/300?text=2",
+      price: 200,
+      quantity: 1,
+    },
+  ];
   const [step, setStep] = useState(1);
+  const [data, setData] = useState(buyData);
+  console.log("root-", data);
   return (
     <main className={`${styles["page"]} container`}>
       <h1 className={`${styles.title} mb-48`}>結帳</h1>
@@ -27,7 +45,7 @@ export default function Checkout() {
             </div>
           </div>
           <div className="col-lg-5 offset-lg-1">
-            <Cart />
+            <Cart data={data} setData={setData} />
           </div>
         </section>
       </form>
