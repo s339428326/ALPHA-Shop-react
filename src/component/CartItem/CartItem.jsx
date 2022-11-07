@@ -11,31 +11,32 @@ export default function CartItem(props) {
   //計算單品數量
   const [count, setCount] = useState(props.quantity);
 
-  const addCountBtn = (e) => {
+  const handleAddCountBtn = (e) => {
     e.preventDefault();
     //更新數量
     setCount((count) => count + 1); //可以使用data status 更新這裡可以優化
-    // 更新buy data 商品數量
+    // 更新在Checkout的buy data 商品數量
     props.setData((data) => {
       data[props.id - 1].quantity += 1;
       return data;
     });
+    //更新在Cart的總金額
     props.setCal(
       (totalPrice) => (totalPrice += props.data[props.id - 1].price)
     );
   };
 
-  const reduceCountBtn = (e) => {
+  const handleReduceCountBtn = (e) => {
     e.preventDefault();
     if (count > 0) {
       //更新數量
       setCount((count) => count - 1); //可以使用data status 更新這裡可以優化
-      // 更新buy data 商品數量
+      // 更新在Checkout的buy data 商品數量
       props.setData((data) => {
         data[props.id - 1].quantity -= 1;
         return data;
       });
-      //更新總金額
+      //更新在Cart的總金額
       props.setCal(
         (totalPrice) => (totalPrice -= props.data[props.id - 1].price)
       );
@@ -54,11 +55,11 @@ export default function CartItem(props) {
       <div className="item-content">
         <p>{props.name}</p>
         <div className={`${styles["item-content-controller"]}`}>
-          <button onClick={reduceCountBtn}>
+          <button onClick={handleReduceCountBtn}>
             <img className="rounded-2" src={reduce} alt="icon-reduce" />
           </button>
           <p>{count}</p>
-          <button onClick={addCountBtn}>
+          <button onClick={handleAddCountBtn}>
             <img src={plus} alt="icon-plus" />
           </button>
         </div>

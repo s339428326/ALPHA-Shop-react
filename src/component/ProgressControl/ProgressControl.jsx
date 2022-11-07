@@ -18,14 +18,14 @@ export default function ProgressControl(props) {
 }
 
 export function StepPreviousBtn(props) {
-  const btnHandler = (e) => {
+  const handleBtn = (e) => {
     e.preventDefault();
     let step = props.step - 1;
     props.setStep(step);
   };
   return (
     <button
-      onClick={btnHandler}
+      onClick={handleBtn}
       className={`btn d-flex align-items-center gap-8`}
     >
       <img src={arrowLeft} alt={`arrow-left`} />
@@ -35,7 +35,7 @@ export function StepPreviousBtn(props) {
 }
 
 export function StepNextBtn(props) {
-  const btnHandler = (e) => {
+  const handleBtn = (e) => {
     e.preventDefault();
     let step = props.step + 1;
     props.setStep(step);
@@ -43,7 +43,7 @@ export function StepNextBtn(props) {
 
   return (
     <button
-      onClick={btnHandler}
+      onClick={handleBtn}
       className={`${styles["btn"]} ${styles["btn-next"]} ${
         props.step === 1 && styles["btn-next-width"]
       } d-flex gap-16 ms-lg-auto d-flex justify-content-center 
