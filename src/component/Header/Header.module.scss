@@ -58,3 +58,22 @@
 .btn-menu:checked ~ .menu-list {
   height: 450px;
 }
+
+//logo
+.cart {
+  position: relative;
+  .item-counter {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    font-size: 0.25rem;
+    background-color: #f67599;
+    color: white;
+    border-radius: 50%;
+    top: -6px;
+    right: -6px;
+  }
+}

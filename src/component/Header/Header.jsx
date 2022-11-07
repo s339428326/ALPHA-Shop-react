@@ -1,5 +1,4 @@
 import styles from "./Header.module.scss";
-
 //svg
 import logo from "../../assets/icon/logo.svg";
 import search from "../../assets/icon/search.svg";
@@ -8,7 +7,9 @@ import moon from "../../assets/icon/moon.svg";
 import menu from "../../assets/icon/menu.svg";
 // import sun from "../../assets/icon/sun.svg";
 
-export default function Header() {
+// props.data.filter((item) => item.quantity !== 0).length
+
+export default function Header(props) {
   return (
     <header className={`${styles["height"]} container`}>
       <nav
@@ -34,7 +35,7 @@ export default function Header() {
               <img src={search} alt="search " />
             </li>
             <li>
-              <img src={cart} alt="search " />
+              <img src={cart} alt="cart" />
             </li>
             <li>
               <img src={moon} alt="moon" />
@@ -48,8 +49,9 @@ export default function Header() {
           <li>
             <img src={search} alt="search " />
           </li>
-          <li>
-            <img src={cart} alt="search " />
+          <li className={`${styles["cart"]}`}>
+            <div className={`${styles["item-counter"]}`}>{props.itemCount}</div>
+            <img src={cart} alt="cart" />
           </li>
           <li>
             <img src={moon} alt="moon" />
