@@ -27,6 +27,7 @@ export default function Checkout() {
   ];
   const [step, setStep] = useState(1);
   const [data, setData] = useState(buyData);
+  const [deliveryFee, setDeliveryFee] = useState(0);
   console.log("root-", data);
   return (
     <main className={`${styles["page"]} container`}>
@@ -37,7 +38,11 @@ export default function Checkout() {
             <StepProgress step={step} />
             <div className={styles["step"]}>
               <Step1 step={step} />
-              <Step2 step={step} />
+              <Step2
+                step={step}
+                deliveryFee={deliveryFee}
+                setDeliveryFee={setDeliveryFee}
+              />
               <Step3 step={step} />
             </div>
             <div className={`${styles["control"]}`}>
@@ -45,7 +50,7 @@ export default function Checkout() {
             </div>
           </div>
           <div className="col-lg-5 offset-lg-1">
-            <Cart data={data} setData={setData} />
+            <Cart data={data} setData={setData} deliveryFee={deliveryFee} />
           </div>
         </section>
       </form>

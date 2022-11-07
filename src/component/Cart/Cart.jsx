@@ -47,11 +47,11 @@ export default function Cart(props) {
       <div className="d-flex justify-content-between pt-16 border-top mb-32">
         <p>運費</p>
         {/* 這裡需要接取From的Step2 運送金額 */}
-        <strong>免費</strong>
+        <strong>{props.deliveryFee === 0 ? "免費" : props.deliveryFee}</strong>
       </div>
       <div className="d-flex justify-content-between pt-16 border-top">
         <p>小計</p>
-        <strong>$ {cal}</strong>
+        <strong>$ {cal + props.deliveryFee}</strong>
       </div>
     </div>
   );

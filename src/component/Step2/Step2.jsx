@@ -8,6 +8,15 @@ export default function Step2(props) {
     }
     return null;
   };
+  //handleNormal
+  const handleNormal = () => {
+    props.setDeliveryFee(0);
+  };
+  //handleDHL
+  const handleDHL = () => {
+    props.setDeliveryFee(500);
+  };
+
   return (
     <div className={`d-flex flex-column ${stepStyle()}`}>
       <h2 className="mb-24">運送方式</h2>
@@ -15,6 +24,7 @@ export default function Step2(props) {
         <div className="col col-lg-10">
           <div className={`${styles["mb-120"]} d-flex flex-column gap-24`}>
             <label
+              onClick={handleNormal}
               htmlFor="normal-transport"
               className={`${styles["select"]} d-flex justify-content-between align-items-center`}
             >
@@ -35,6 +45,7 @@ export default function Step2(props) {
               <div>免費</div>
             </label>
             <label
+              onClick={handleDHL}
               htmlFor="DHL-transport"
               className={`${styles["select"]} d-flex justify-content-between align-items-center`}
             >
