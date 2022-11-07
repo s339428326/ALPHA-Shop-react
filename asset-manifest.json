@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ALPHA-Shop-react/static/css/main.977ba538.css",
-    "main.js": "/ALPHA-Shop-react/static/js/main.7f6743f5.js",
+    "main.js": "/ALPHA-Shop-react/static/js/main.257930ac.js",
     "static/media/logo.svg": "/ALPHA-Shop-react/static/media/logo.7ea861ea30dffdc8868036a2641ea1f7.svg",
     "static/media/ins.svg": "/ALPHA-Shop-react/static/media/ins.17e98dac2c0120bb855926944464e299.svg",
     "static/media/whatApp.svg": "/ALPHA-Shop-react/static/media/whatApp.672f767b64c3276761dd82a13e54be92.svg",
@@ -16,10 +16,10 @@
     "static/media/reduce.svg": "/ALPHA-Shop-react/static/media/reduce.5d3211d7aba2b7841025497a74f8716a.svg",
     "static/media/menu.svg": "/ALPHA-Shop-react/static/media/menu.7eca1ce0bad1225bba8f9d2b4fd5cef3.svg",
     "main.977ba538.css.map": "/ALPHA-Shop-react/static/css/main.977ba538.css.map",
-    "main.7f6743f5.js.map": "/ALPHA-Shop-react/static/js/main.7f6743f5.js.map"
+    "main.257930ac.js.map": "/ALPHA-Shop-react/static/js/main.257930ac.js.map"
   },
   "entrypoints": [
     "static/css/main.977ba538.css",
-    "static/js/main.7f6743f5.js"
+    "static/js/main.257930ac.js"
   ]
 }
