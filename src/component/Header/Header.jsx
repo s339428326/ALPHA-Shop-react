@@ -1,3 +1,4 @@
+//scss
 import styles from "./Header.module.scss";
 //svg
 import logo from "../../assets/icon/logo.svg";
@@ -6,8 +7,6 @@ import cart from "../../assets/icon/cart.svg";
 import moon from "../../assets/icon/moon.svg";
 import menu from "../../assets/icon/menu.svg";
 // import sun from "../../assets/icon/sun.svg";
-
-// props.data.filter((item) => item.quantity !== 0).length
 
 export default function Header(props) {
   return (

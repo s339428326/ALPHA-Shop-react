@@ -1,3 +1,8 @@
+//context
+import { PaymentContext } from "../context/PaymentContext/PaymentContext";
+//hook
+import { useContext } from "react";
+
 export default function Step3(props) {
   //換頁時使用d-none遮蔽元件
   const stepStyle = () => {
@@ -6,6 +11,22 @@ export default function Step3(props) {
     }
     return null;
   };
+  //context
+  const paymentData = useContext(PaymentContext);
+  //get PaymentContext value
+  const handleName = (e) => {
+    paymentData.cardName = e.target.value;
+  };
+  const handleNumber = (e) => {
+    paymentData.cardNumber = e.target.value;
+  };
+  const handleCardDate = (e) => {
+    paymentData.cardDate = e.target.value;
+  };
+  const handleCardCCV = (e) => {
+    paymentData.cardCCV = e.target.value;
+  };
+
   return (
     <div className={`d-flex flex-column ${stepStyle()}`}>
       <h2 className="mb-24">付款資訊</h2>
@@ -15,6 +36,7 @@ export default function Step3(props) {
             持卡人姓名
           </label>
           <input
+            onChange={handleName}
             type="text"
             name={"card-name"}
             id={"card-name"}
@@ -27,6 +49,7 @@ export default function Step3(props) {
           </label>
 
           <input
+            onChange={handleNumber}
             type="text"
             name={"card-number"}
             id={"card-number"}
@@ -38,6 +61,7 @@ export default function Step3(props) {
             有效期限
           </label>
           <input
+            onChange={handleCardDate}
             type="text"
             name={"card-date"}
             id={"card-date"}
@@ -49,7 +73,8 @@ export default function Step3(props) {
             CVC / CCV
           </label>
           <input
-            type="text"
+            onChange={handleCardCCV}
+            type="password"
             name={"card-ccv"}
             id={"card-ccv"}
             placeholder="123"

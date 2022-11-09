@@ -1,21 +1,33 @@
 import styles from "./Cart.module.scss";
 import CartItem from "../CartItem/CartItem";
+
+//context
+import { CartContext } from "../context/CartContext/CartContext";
+import { PaymentContext } from "../context/PaymentContext/PaymentContext";
+
+//hook
 import { useState } from "react";
+import { useContext } from "react";
 
 export default function Cart(props) {
-  console.log("Cart資料-", props.data);
+  //context var
+  const cartData = useContext(CartContext);
+  const paymentData = useContext(PaymentContext);
+  console.log("Cart資料-", cartData);
 
   //總金額
   const [cal, setCal] = useState(
-    props.data.map((item) => item.price * item.quantity).reduce((a, b) => a + b)
+    cartData.map((item) => item.price * item.quantity).reduce((a, b) => a + b)
   );
-
+  //paymentData paymentPrice setting
+  paymentData.paymentPrice = cal !== 0 ? cal + props.deliveryFee : cal;
+  console.log(paymentData);
   return (
     <div className="px-24 py-32 border rounded-3 h-100">
       <h3>購物籃</h3>
       <ul className="list-unstyled d-flex flex-column gap-24 my-32 item-list">
         {cal !== 0 ? (
-          props.data.map((item, index) => {
+          cartData.map((item, index) => {
             return (
               <li key={`CartItem-${index}`}>
                 <CartItem
@@ -24,8 +36,6 @@ export default function Cart(props) {
                   img={item.img}
                   price={item.price}
                   quantity={item.quantity}
-                  data={props.data}
-                  setData={props.setData}
                   setCal={setCal}
                   setItemCount={props.setItemCount}
                 />

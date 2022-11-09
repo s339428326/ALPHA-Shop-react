@@ -1,4 +1,4 @@
-import styles from "./Checkout.module.scss";
+//component
 import StepProgress from "../../StepProgress/StepProgress";
 import Step1 from "../../Step1/Step1";
 import Step2 from "../../Step2/Step2";
@@ -6,7 +6,15 @@ import Step3 from "../../Step3/Step3";
 import Cart from "../../Cart/Cart";
 import ProgressControl from "../../ProgressControl/ProgressControl";
 
+//scss
+import styles from "./Checkout.module.scss";
+
+//context
+// import { CartContext } from "../../context/CartContext/CartContext";
+
+///hook
 import { useState } from "react";
+// import { useContext } from "react";
 
 export default function Checkout(props) {
   const [step, setStep] = useState(1);
@@ -28,14 +36,14 @@ export default function Checkout(props) {
               <Step3 step={step} />
             </div>
             <div className={`${styles["control"]}`}>
+              {/* 這裡確定表單傳送 */}
               <ProgressControl step={step} setStep={setStep} />
             </div>
           </div>
           <div className="col-lg-5 offset-lg-1">
             <Cart
-              data={props.data}
-              setData={props.setData}
               deliveryFee={deliveryFee}
+              itemCount={props.itemCount}
               setItemCount={props.setItemCount}
             />
           </div>
