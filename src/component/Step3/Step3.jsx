@@ -1,3 +1,6 @@
+//component
+import Field from "../Field/Field";
+
 //context
 import { PaymentContext } from "../context/PaymentContext/PaymentContext";
 //hook
@@ -13,73 +16,46 @@ export default function Step3(props) {
   };
   //context
   const paymentData = useContext(PaymentContext);
-  //get PaymentContext value
-  const handleName = (e) => {
-    paymentData.cardName = e.target.value;
-  };
-  const handleNumber = (e) => {
-    paymentData.cardNumber = e.target.value;
-  };
-  const handleCardDate = (e) => {
-    paymentData.cardDate = e.target.value;
-  };
-  const handleCardCCV = (e) => {
-    paymentData.cardCCV = e.target.value;
-  };
 
   return (
     <div className={`d-flex flex-column ${stepStyle()}`}>
       <h2 className="mb-24">付款資訊</h2>
       <div className="row">
-        <div className="col-8 mb-24">
-          <label className={`mb-8`} htmlFor={"card-name"}>
-            持卡人姓名
-          </label>
-          <input
-            onChange={handleName}
-            type="text"
-            name={"card-name"}
-            id={"card-name"}
-            placeholder="請輸入姓名"
-          />
-        </div>
-        <div className="col-8 mb-24 offset-col-4">
-          <label className={`mb-8`} htmlFor={"card-number"}>
-            卡號
-          </label>
-
-          <input
-            onChange={handleNumber}
-            type="text"
-            name={"card-number"}
-            id={"card-number"}
-            placeholder="1111 2222 3333 4444"
-          />
-        </div>
-        <div className="col-6 mb-24">
-          <label className={`mb-8`} htmlFor={"card-date"}>
-            有效期限
-          </label>
-          <input
-            onChange={handleCardDate}
-            type="text"
-            name={"card-date"}
-            id={"card-date"}
-            placeholder="MM/YY"
-          />
-        </div>
-        <div className="col-6 mb-24">
-          <label className={`mb-8`} htmlFor={"card-ccv"}>
-            CVC / CCV
-          </label>
-          <input
-            onChange={handleCardCCV}
-            type="password"
-            name={"card-ccv"}
-            id={"card-ccv"}
-            placeholder="123"
-          />
-        </div>
+        <Field
+          col="8"
+          id="card-name"
+          titleName="持卡人姓名"
+          type="text"
+          data={paymentData}
+          dataValue="cardName"
+          placeholder="請輸入姓名"
+        />
+        <Field
+          col="8"
+          id="card-number"
+          titleName="卡號"
+          type="text"
+          data={paymentData}
+          dataValue="cardNumber"
+        />
+        <Field
+          col={6}
+          id="card-data"
+          titleName="有效期限"
+          type="text"
+          data={paymentData}
+          dataValue="cardDate"
+          placeholder="MM/YY"
+        />
+        <Field
+          col={6}
+          id="card-ccv"
+          titleName=" CVC / CCV"
+          type="password"
+          data={paymentData}
+          dataValue="cardCCV"
+          placeholder="123"
+        />
       </div>
     </div>
   );
