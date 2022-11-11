@@ -49,6 +49,7 @@ export default function Step1(props) {
             name="email"
             id="email"
             placeholder="請輸入電子郵件"
+            required
           />
         </div>
         <div className="col-4">

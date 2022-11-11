@@ -8,13 +8,12 @@ import { CartContext } from "../context/CartContext/CartContext";
 import { useContext } from "react";
 
 export default function CartItem(props) {
-  ///////////////////////////////////////////////////
   const cartData = useContext(CartContext);
   console.log("CartItem-Context ", cartData);
 
-  ///////////////////////////////////////////////////
-  //計算單品數量
-  console.log("更新");
+  let itemPrice = props.currency(
+    cartData[props.id - 1].price * cartData[props.id - 1].quantity
+  );
 
   const handleAddCountBtn = (e) => {
     e.preventDefault();
@@ -55,9 +54,7 @@ export default function CartItem(props) {
         </div>
       </div>
       <div className={`${styles["item-end"]}`}>
-        <p>
-          $ {cartData[props.id - 1].price * cartData[props.id - 1].quantity}
-        </p>
+        <p>$ {itemPrice}</p>
       </div>
     </div>
   ) : null;

@@ -9,12 +9,8 @@ import ProgressControl from "../../ProgressControl/ProgressControl";
 //scss
 import styles from "./Checkout.module.scss";
 
-//context
-// import { CartContext } from "../../context/CartContext/CartContext";
-
 ///hook
 import { useState } from "react";
-// import { useContext } from "react";
 
 export default function Checkout(props) {
   const [step, setStep] = useState(1);
@@ -36,7 +32,6 @@ export default function Checkout(props) {
               <Step3 step={step} />
             </div>
             <div className={`${styles["control"]}`}>
-              {/* 這裡確定表單傳送 */}
               <ProgressControl step={step} setStep={setStep} />
             </div>
           </div>
