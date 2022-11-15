@@ -16,7 +16,7 @@ export default function ProgressControl(props) {
       {props.step === 1 || props.step === 2 ? (
         <StepNextBtn step={props.step} setStep={props.setStep} />
       ) : (
-        <StepFinishBtn />
+        <StepFinishBtn setSubmit={props.setSubmit} />
       )}
     </div>
   );

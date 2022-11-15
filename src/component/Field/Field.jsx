@@ -1,3 +1,4 @@
+import { useRef } from "react";
 export default function Field(props) {
   //Taiwan city data
   const cityData = [
@@ -41,8 +42,9 @@ export default function Field(props) {
   //check Data context and props dataValue
   const checkData = data && data[`${props.dataValue}`];
   //Get input value to change props.data context value
+  const inputValue = useRef();
   const handleDataValue = (e) => {
-    data[`${props.dataValue}`] = e.target.value;
+    data[`${props.dataValue}`] = inputValue.current.value;
   };
   //placeholder
   const placeholder = props.placeholder || `請輸入${props.titleName}`;
@@ -88,6 +90,7 @@ export default function Field(props) {
             {props.titleName}
           </label>
           <input
+            ref={inputValue}
             onChange={handleDataValue}
             type={props.type}
             name={`${id}`}

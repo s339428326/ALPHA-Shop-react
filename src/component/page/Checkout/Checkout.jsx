@@ -15,6 +15,7 @@ import { useState } from "react";
 export default function Checkout(props) {
   const [step, setStep] = useState(1);
   const [deliveryFee, setDeliveryFee] = useState(0);
+
   return (
     <main className={`${styles["page"]} container`}>
       <h1 className={`${styles.title} mb-48`}>結帳</h1>
